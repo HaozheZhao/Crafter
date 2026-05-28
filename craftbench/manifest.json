@@ -1,0 +1,55 @@
+{
+  "name": "CraftBench",
+  "n": 3,
+  "tasks": [
+    "t2i",
+    "inpaint",
+    "keyelems",
+    "sketch"
+  ],
+  "styles": [
+    "academic",
+    "poster",
+    "infographic"
+  ],
+  "stats": {
+    "by_task": {
+      "t2i": 179,
+      "sketch": 40,
+      "keyelems": 30,
+      "inpaint": 30
+    },
+    "by_style": {
+      "academic": 140,
+      "poster": 109,
+      "infographic": 30
+    }
+  },
+  "samples": [
+    {
+      "id": "craftbench-0001",
+      "task": "t2i",
+      "style": "academic",
+      "meta": "samples/craftbench-0001.json",
+      "target_image": "images/gt/craftbench-0001.png",
+      "input_image": null
+    },
+    {
+      "id": "craftbench-0004",
+      "task": "sketch",
+      "style": "academic",
+      "meta": "samples/craftbench-0004.json",
+      "target_image": "images/gt/craftbench-0004.png",
+      "input_image": "images/inputs/craftbench-0004.png"
+    },
+    {
+      "id": "craftbench-0026",
+      "task": "inpaint",
+      "style": "poster",
+      "meta": "samples/craftbench-0026.json",
+      "target_image": "images/gt/craftbench-0026.png",
+      "input_image": "images/inputs/craftbench-0026.png"
+    }
+  ],
+  "note": "Illustrative format only \u2014 full 279-sample dataset on HuggingFace: BleachNick/CraftBench"
+}

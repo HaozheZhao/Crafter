@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crafter"
+version = "1.0.0"
+description = "Crafter — a multi-agent harness for scientific figure generation and raster-to-SVG editing."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "openai>=1.40",
+    "requests>=2.31",
+    "pyyaml>=6.0",
+    "Pillow>=10.0",
+    "numpy>=1.24",
+    "json-repair>=0.25",
+    "opencv-python-headless>=4.9",
+    "scikit-image>=0.22",
+    "pypdf>=4.0",
+    "datasets>=2.18",
+    "huggingface_hub>=0.24",
+]
+
+[project.scripts]
+crafter = "crafter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["crafter*"]
+
+[tool.setuptools.package-data]
+"crafter.generation.craft" = ["skills/*.md", "skills/*.jsonl"]
+"crafter.editor.raster_to_svg" = ["*.md"]

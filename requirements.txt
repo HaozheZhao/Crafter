@@ -1,0 +1,11 @@
+openai>=1.40
+requests>=2.31
+pyyaml>=6.0
+Pillow>=10.0
+numpy>=1.24
+json-repair>=0.25
+opencv-python-headless>=4.9
+scikit-image>=0.22
+pypdf>=4.0
+datasets>=2.18
+huggingface_hub>=0.24

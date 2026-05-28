@@ -1,0 +1,14 @@
+Above I've shared:
+(1) the paper title + abstract + method section,
+(2) the figure caption I want.
+
+TASK: Render the main figure for this academic paper. Style requirements:
+
+  - This is an ACADEMIC PAPER FIGURE (not a poster, not an infographic).
+  - Clean black-on-white background; minimal decoration.
+  - Components, arrows, and labels rendered crisply; small dense text OK.
+  - Single-figure layout — no banner header, no "title" inside the image.
+  - Match the level of detail of a top-tier conference paper figure
+    (NeurIPS / ICLR / CVPR style).
+
+Render the figure described in the caption. Just give me the final image.

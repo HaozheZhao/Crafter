@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.env
+.env.local
+*.secrets*
+outputs/
+runs/
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
+.sam3_server_url
+external_comparison/
+.craft_cache/
+assets_runtime/
+.huggingface/
+hf_cache/

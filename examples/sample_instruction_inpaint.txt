@@ -1,0 +1,22 @@
+A reference image is attached above. It is a partial figure for a conference poster — most of it is already drawn, but ONE region has been
+masked out / left blank. The masked region is described as:
+
+  'The Methodology column.'
+
+I've also shared the paper title + abstract + method section + figure
+caption + paragraphs that reference this figure.
+
+TASK: This is an INPAINT EDIT, not a fresh generation.
+
+  - The reference image IS your starting point. Preserve every pixel
+    that is NOT in the masked region. Layout, colours, components,
+    labels, typography of the un-masked region must be identical.
+  - ONLY modify the masked region: fill it in with content matching
+    the description above, in a style consistent with the rest of the
+    figure.
+  - Do NOT redraw the figure from scratch. Do NOT change the layout.
+    Do NOT restyle the un-masked region.
+
+If your output bears no resemblance to the reference image except in
+the masked area, you've failed the task. Just give me the inpainted
+final figure.
