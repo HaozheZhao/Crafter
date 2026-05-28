@@ -242,13 +242,11 @@ Crafter/
 ## 📑 Citation
 
 ```bibtex
-@inproceedings{zhao2026crafter,
-  title     = {Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs},
-  author    = {Zhao, Haozhe and Si, Shuzheng and Wang, Zhenhailong and Wang, Zheng
-               and Chen, Liang and Li, Xiaotong and Liang, Zhixiang and Sun, Maosong
-               and Zhang, Minjia},
-  booktitle = {NeurIPS},
-  year      = {2026},
+@article{zhao_crafter,
+  title  = {Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs},
+  author = {Zhao, Haozhe and Si, Shuzheng and Wang, Zhenhailong and Wang, Zheng
+            and Chen, Liang and Li, Xiaotong and Liang, Zhixiang and Sun, Maosong
+            and Zhang, Minjia},
 }
 ```
 
