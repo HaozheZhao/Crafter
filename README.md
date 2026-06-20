@@ -4,7 +4,7 @@
 
 **A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs**
 
-[![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2605.30611-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.30611)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-CraftBench-orange?style=for-the-badge)](https://huggingface.co/datasets/BleachNick/CraftBench)
 
 Haozhe Zhao, Shuzheng Si, Zhenhailong Wang, Zheng Wang, Liang Chen,
@@ -52,22 +52,24 @@ All chat / VLM / image calls go through a single OpenAI-compatible endpoint
 (OpenRouter). The role mapping lives in
 [`configs/default.yaml`](configs/default.yaml).
 
-CraftEditor additionally needs a text-prompted SAM3 grounding server. Start
-one on any machine with a CUDA-capable GPU:
+CraftEditor additionally needs a text-prompted SAM3 grounding server. The
+[`scripts/sam3_server.py`](scripts/sam3_server.py) wrapper in this repo serves
+the three endpoints CraftEditor calls (`/segment`, `/segment_bbox`,
+`/health`). On a machine with a CUDA-capable GPU:
 
 ```bash
 # 1. Install the official SAM3 package
-git clone https://github.com/facebookresearch/sam3 && cd sam3
-pip install -e . && pip install timm ftfy iopath portalocker flask
+git clone https://github.com/facebookresearch/sam3 && pip install -e ./sam3
+pip install timm ftfy iopath portalocker flask
 
-# 2. Run a small Flask wrapper that exposes /health, /segment_text, /segment_points
-python sam3_server.py --port 8765 --host 0.0.0.0
+# 2. Start the server (defaults to port 8765)
+python scripts/sam3_server.py --port 8765 --host 0.0.0.0
 
-# 3. Point Crafter at the server
+# 3. Point Crafter at it
 export SAM3_SERVER_URL="http://<host>:8765"
 ```
 
-CraftEditor requires the SAM3 server. If you do not run one, use only the
+CraftEditor requires this server. If you do not run one, use only the
 generation half (the commands below).
 
 ## 🚀 Quick start
@@ -242,11 +244,14 @@ Crafter/
 ## 📑 Citation
 
 ```bibtex
-@article{zhao_crafter,
-  title  = {Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs},
-  author = {Zhao, Haozhe and Si, Shuzheng and Wang, Zhenhailong and Wang, Zheng
-            and Chen, Liang and Li, Xiaotong and Liang, Zhixiang and Sun, Maosong
-            and Zhang, Minjia},
+@misc{zhao2026craftermultiagentharnesseditable,
+  title         = {Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs},
+  author        = {Haozhe Zhao and Shuzheng Si and Zhenhailong Wang and Zheng Wang and Liang Chen and Xiaotong Li and Zhixiang Liang and Maosong Sun and Minjia Zhang},
+  year          = {2026},
+  eprint        = {2605.30611},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2605.30611},
 }
 ```
 
